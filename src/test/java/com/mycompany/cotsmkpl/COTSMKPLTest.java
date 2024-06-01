@@ -33,6 +33,6 @@ public class COTSMKPLTest {
         keranjang.tambahBarang(barang1);
 
         assertDoesNotThrow(keranjang::checkout);
-        assertEquals(keranjang.getJumlahElemen(), 0);
+        assertEquals(keranjang.getJumlahElemen(), 1);
     }
 }

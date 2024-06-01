@@ -35,4 +35,16 @@ public class COTSMKPLTest {
         assertDoesNotThrow(keranjang::checkout);
         assertEquals(keranjang.getJumlahElemen(), 0);
     }
+
+    @Test
+    public void testCheckout2() {
+        Barang barang1 = new Barang("Pensil", 3, 4000);
+        Barang barang2 = new Barang("Kertas", 2, 20000);
+        KeranjangBelanja keranjang = new KeranjangBelanja("Surya", 10);
+        keranjang.setKodeOTP(111111);
+        keranjang.tambahBarang(barang1);
+        keranjang.tambahBarang(barang2);
+
+        assertEquals(keranjang.getJumlahElemen(), 2);
+    }
 }
